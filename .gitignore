@@ -1,0 +1,43 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+out/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.settings/
+
+# OS / Misc
+Thumbs.db
+db.log
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Icon?
+
+# Gemini / Antigravity specific files
+.gemini/
+.antigravity/
+temp_test_db.js

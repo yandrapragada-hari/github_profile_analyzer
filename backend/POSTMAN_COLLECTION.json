@@ -1,0 +1,69 @@
+{
+  "info": {
+    "name": "GitHub Profile Analyzer API",
+    "_postman_id": "00000000-0000-0000-0000-000000000000",
+    "description": "Postman collection for GitHub Profile Analyzer API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Analyze & Upsert Profile",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/api/profiles/torvalds",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "profiles", "torvalds"]
+        }
+      }
+    },
+    {
+      "name": "Get All Profiles",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/profiles",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "profiles"]
+        }
+      }
+    },
+    {
+      "name": "Get Single Profile",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/profiles/torvalds",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "profiles", "torvalds"]
+        }
+      }
+    },
+    {
+      "name": "Get Stats",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/stats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "stats"]
+        }
+      }
+    }
+  ]
+}
+
