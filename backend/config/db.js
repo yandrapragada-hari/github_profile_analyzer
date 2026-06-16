@@ -1,9 +1,15 @@
 const mysql = require('mysql2/promise');
 
 let pool;
-const connectionUrl = process.env.DATABASE_URL || process.env.MYSQL_URL;
+let connectionUrl = process.env.DATABASE_URL || process.env.MYSQL_URL;
 
 if (connectionUrl) {
+  connectionUrl = connectionUrl.trim();
+  // Ensure the URL has the mysql:// or mariadb:// protocol prefix
+  if (!connectionUrl.startsWith('mysql://') && !connectionUrl.startsWith('mariadb://')) {
+    connectionUrl = 'mysql://' + connectionUrl;
+  }
+
   const poolConfig = {
     uri: connectionUrl,
     waitForConnections: true,
